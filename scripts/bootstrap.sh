@@ -3,20 +3,20 @@ set -e
 set -x
 
 # root's .ssh init
-[[ ! -d /root/.ssh ]] && mkdir /root/.ssh
-cp /vagrant/scripts/ssh/* /root/.ssh/
-cat /vagrant/scripts/ssh/*.pub >> /root/.ssh/authorized_keys
-chmod -R 0700 /root/.ssh
+#[[ ! -d /root/.ssh ]] && mkdir /root/.ssh
+#cp /vagrant/scripts/ssh/* /root/.ssh/
+#cat /vagrant/scripts/ssh/*.pub >> /root/.ssh/authorized_keys
+#chmod -R 0700 /root/.ssh
 
 # vagrant's .ssh init
-cp /vagrant/scripts/ssh/* .ssh/
-cat /vagrant/scripts/ssh/*.pub >> .ssh/authorized_keys
-chown vagrant:vagrant .ssh/*
-chmod -R 0700 .ssh
+#cp /vagrant/scripts/ssh/* .ssh/
+#cat /vagrant/scripts/ssh/*.pub >> .ssh/authorized_keys
+#chown vagrant:vagrant .ssh/*
+#chmod -R 0700 .ssh
 
 # identity for git checkout
-ssh-add /root/.ssh/skolka
-ssh-add -l
+#ssh-add /root/.ssh/skolka
+#ssh-add -l
 
 # apt
 apt-get update
