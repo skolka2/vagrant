@@ -1,0 +1,15 @@
+[global]
+	socket options = TCP_NODELAY IPTOS_LOWDELAY
+	use sendfile = No
+	getwd cache = Yes
+	oplocks = No
+
+[public]
+	comment = Analytics Vagrant
+	path = /home/vagrant/public/
+	browseable = yes
+	writable = yes
+	create mask = 0644
+	directory mask = 0755
+	valid users = vagrant
+
